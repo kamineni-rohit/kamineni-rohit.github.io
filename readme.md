@@ -15,6 +15,7 @@ Welcome to my portfolio website repository! This project showcases my skills and
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
+- [Additional Information about the React App](#getting-started-with-create-react-app)
 
 ## About
 
@@ -104,7 +105,7 @@ Feel free to reach out if you have any questions or suggestions:
 - **LinkedIn**: [your-linkedin-profile](https://www.linkedin.com/in/your-profile)
 - **GitHub**: [your-github-username](https://github.com/your-username)
 
-Thank you for visiting my portfolio website repository!
+<b>Thank you for visiting my portfolio website repository!</b>
 
 
 # Getting Started with Create React App
