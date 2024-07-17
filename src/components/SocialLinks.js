@@ -16,6 +16,11 @@ const SocialLinksContainer = styled.div`
 const SocialLink = styled.a`
   color: #e94560;
   font-size: 1.5rem;
+  text-decoration: none;
+
+  &:hover {
+    color: #ffffff;
+  }
 `;
 
 // SocialLinks component definition
