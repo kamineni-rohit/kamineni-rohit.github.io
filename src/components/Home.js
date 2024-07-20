@@ -3,32 +3,32 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
 
-// Styled component for the home container
+// Create a styled component for the home container
 const HomeContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;  // Changed to min-height to ensure it takes up full viewport height
+  min-height: 100vh;
   background-color: #0f3460;
   color: #ffffff;
   text-align: center;
-  padding-top: 80px;  // Offset for fixed header
+  padding-top: 80px; // Offset for fixed header
 `;
 
-// Styled component for the welcome text
+// Create a styled component for the welcome text
 const WelcomeText = styled.h1`
   font-size: 3rem;
   margin-bottom: 1rem;
 `;
 
-// Styled component for the home description text
+// Create a styled component for the home description text
 const HomeDescription = styled.p`
   font-size: 1.5rem;
   max-width: 600px;
 `;
 
-// Styled component for the navigation buttons container
+// Create a styled component for the navigation buttons container
 const NavButtons = styled.div`
   display: flex;
   justify-content: center;
@@ -36,7 +36,7 @@ const NavButtons = styled.div`
   margin-top: 2rem;
 `;
 
-// Styled component for each navigation button
+// Create a styled component for each navigation button
 const Button = styled.button`
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -46,21 +46,24 @@ const Button = styled.button`
   border-radius: 5px;
   cursor: pointer;
 
+  // Add hover effect for button
   &:hover {
     background-color: #e94560;
     color: #1a1a2e;
   }
 `;
 
-// Home component definition
+// Define the Home component
 const Home = () => {
+  // Create references for scrolling to sections
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
 
+  // Function to scroll to a specific section
   const scrollToSection = (ref) => {
     window.scrollTo({
-      top: ref.current.offsetTop - 80,  // Adjusting for header height
+      top: ref.current.offsetTop - 80, // Adjusting for header height
       behavior: 'smooth'
     });
   };
@@ -112,26 +115,26 @@ const Home = () => {
   );
 };
 
-// Styled component for the about container
+// Create a styled component for the about container
 const AboutContainer = styled.section`
   padding: 2rem;
   background-color: #16213e;
   color: #ffffff;
-  min-height: 100vh;  // Ensure full viewport height
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
 
-// Styled component for the title
+// Create a styled component for the title
 const Title = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 1rem;
   text-align: center;
 `;
 
-// Styled component for the description text
+// Create a styled component for the description text
 const Description = styled.p`
   font-size: 1.2rem;
   max-width: 800px;
@@ -139,19 +142,19 @@ const Description = styled.p`
   text-align: center;
 `;
 
-// Styled component for the projects container
+// Create a styled component for the projects container
 const ProjectsContainer = styled.section`
   padding: 2rem;
   background-color: #1a1a2e;
   color: #ffffff;
-  min-height: 100vh;  // Ensure full viewport height
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
 
-// Styled component for the project list container
+// Create a styled component for the project list container
 const ProjectList = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -159,7 +162,7 @@ const ProjectList = styled.div`
   gap: 1rem;
 `;
 
-// Styled component for each project card
+// Create a styled component for each project card
 const ProjectCard = styled.div`
   background-color: #0f3460;
   padding: 1rem;
@@ -167,23 +170,23 @@ const ProjectCard = styled.div`
   width: 300px;
 `;
 
-// Styled component for the project title
+// Create a styled component for the project title
 const ProjectTitle = styled.h3`
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 `;
 
-// Styled component for the project description text
+// Create a styled component for the project description text
 const ProjectDescription = styled.p`
   font-size: 1rem;
 `;
 
-// Styled component for the contact container
+// Create a styled component for the contact container
 const ContactContainer = styled.section`
   padding: 2rem;
   background-color: #16213e;
   color: #ffffff;
-  min-height: 100vh;  // Ensure full viewport height
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -191,7 +194,7 @@ const ContactContainer = styled.section`
   text-align: center;
 `;
 
-// Styled component for the contact info text
+// Create a styled component for the contact info text
 const ContactInfo = styled.p`
   font-size: 1.2rem;
 `;
