@@ -1,29 +1,27 @@
 // src/App.js
 
-import './App.css';
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useRef } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
 import Projects from './components/Projects';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
-import SocialLinks from './components/SocialLinks';
 
-// App component definition
 const App = () => {
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+
   return (
     <Router>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <SocialLinks />
-      <Footer />
+      <main>
+        <Home aboutRef={aboutRef} projectsRef={projectsRef} contactRef={contactRef} />
+        <About ref={aboutRef} />
+        <Projects ref={projectsRef} />
+      </main>
+      <Footer ref={contactRef} />
     </Router>
   );
 };

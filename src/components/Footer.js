@@ -2,7 +2,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import { FaLinkedin, FaTwitter, FaMedium, FaGithub, FaDev } from 'react-icons/fa';
 
 // Styled component for the footer container
 const FooterContainer = styled.footer`
@@ -12,72 +12,70 @@ const FooterContainer = styled.footer`
   text-align: center;
 `;
 
-// Styled component for the footer content
-const FooterContent = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-`;
-
-// Styled component for each section in the footer
-const Section = styled.div`
-  flex: 1;
-  min-width: 200px;
-`;
-
-// Styled component for the social links container in the footer
-const SocialLinksContainer = styled.div`
+// Styled component for the social links list
+const SocialLinks = styled.ul`
+  list-style: none;
+  padding: 0;
   display: flex;
   justify-content: center;
   gap: 1rem;
 `;
 
-// Styled component for each social link in the footer
-const SocialLink = styled.a`
-  color: #e94560;
-  font-size: 1.5rem;
-  text-decoration: none;
-
-  &:hover {
+// Styled component for each social link item
+const SocialLinkItem = styled.li`
+  a {
     color: #ffffff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #e94560;
+    }
   }
 `;
 
-// Footer component definition
+// Styled component for the copyright text
+const Copyright = styled.div`
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #b0b0b0;
+`;
+
+// Define the Footer component
 const Footer = () => {
   return (
-    <FooterContainer>
-      <FooterContent>
-        <Section>
-          <h4>Contact Info</h4>
-          <p>Email: kaminenirohit1@gmail.com</p>
-          <p>Phone: +1 (484) 744-1785</p>
-        </Section>
-        <Section>
-          <h4>Quick Links</h4>
-          <p><a href="#home" style={{ color: '#e94560' }}>Home</a></p>
-          <p><a href="#about" style={{ color: '#e94560' }}>About</a></p>
-          <p><a href="#projects" style={{ color: '#e94560' }}>Projects</a></p>
-          <p><a href="#contact" style={{ color: '#e94560' }}>Contact</a></p>
-        </Section>
-        <Section>
-          <h4>Follow Me</h4>
-          <SocialLinksContainer>
-            <SocialLink href="https://www.linkedin.com/in/rohit-kamineni/" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin />
-            </SocialLink>
-            <SocialLink href="https://github.com/kamineni-rohit" target="_blank" rel="noopener noreferrer">
-              <FaGithub />
-            </SocialLink>
-            <SocialLink href="https://twitter.com/your-twitter" target="_blank" rel="noopener noreferrer">
-              <FaTwitter />
-            </SocialLink>
-          </SocialLinksContainer>
-        </Section>
-      </FooterContent>
-      <p>&copy; 2024 Rohit Kamineni. All rights reserved.</p>
+    <FooterContainer id="contact">
+      <h4>Work With Me</h4>
+      <SocialLinks>
+        <SocialLinkItem>
+          <a href="https://www.linkedin.com/in/rohit-kamineni/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin />
+          </a>
+        </SocialLinkItem>
+        <SocialLinkItem>
+          <a href="https://twitter.com/rohitkamineni" target="_blank" rel="noopener noreferrer">
+            <FaTwitter />
+          </a>
+        </SocialLinkItem>
+        <SocialLinkItem>
+          <a href="https://medium.com/@rohitkamineni" target="_blank" rel="noopener noreferrer">
+            <FaMedium />
+          </a>
+        </SocialLinkItem>
+        <SocialLinkItem>
+          <a href="https://github.com/rohitkamineni" target="_blank" rel="noopener noreferrer">
+            <FaGithub />
+          </a>
+        </SocialLinkItem>
+        <SocialLinkItem>
+          <a href="https://dev.to/rohitkamineni" target="_blank" rel="noopener noreferrer">
+            <FaDev />
+          </a>
+        </SocialLinkItem>
+      </SocialLinks>
+      <Copyright>
+        &copy; {new Date().getFullYear()} Rohit Kamineni. All rights reserved.
+      </Copyright>
     </FooterContainer>
   );
 };
