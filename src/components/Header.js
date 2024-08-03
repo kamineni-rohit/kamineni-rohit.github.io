@@ -1,6 +1,6 @@
 // src/components/Header.js
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
 
@@ -9,8 +9,8 @@ const HeaderContainer = styled.header`
   position: fixed;
   width: 100%;
   top: 0;
-  background-color: rgba(20, 20, 20, 0.9); // Dark transparent background
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: ${({ scrolled }) => (scrolled ? '#009ACD' : '#FFFFFF')}; // Change background color on scroll
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   transition: all 0.3s ease-in-out;
 `;
@@ -27,7 +27,7 @@ const NavLinks = styled.nav`
 const Logo = styled.div`
   font-size: 1.5rem;
   font-weight: bold;
-  color: #e94560; // Light color for the logo text
+  color: ${({ scrolled }) => (scrolled ? '#FFFFFF' : '#009ACD')}; // Change logo color on scroll
 `;
 
 // Styled component for the individual link
@@ -35,16 +35,20 @@ const NavLink = styled(Link)`
   margin: 0 1rem;
   cursor: pointer;
   font-size: 1rem;
-  color: #ffffff; // Light color for the links
+  color: ${({ scrolled }) => (scrolled ? '#FFFFFF' : '#009ACD')}; // Change link color on scroll
   text-decoration: none;
   position: relative;
+
+  &.active {
+    color: #FFFFFF; // Highlight current section link
+  }
 
   &:hover::after {
     content: '';
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #e94560;
+    background-color: #FFFFFF;
     bottom: -4px;
     left: 0;
     transition: width 0.3s ease-in-out;
@@ -52,12 +56,26 @@ const NavLink = styled(Link)`
 `;
 
 const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    setScrolled(offset > window.innerHeight);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <HeaderContainer>
+    <HeaderContainer scrolled={scrolled}>
       <NavLinks>
-        <Logo>RK</Logo>
+        <Logo scrolled={scrolled}>RK</Logo>
         <div>
-          <NavLink to="home" smooth={true} duration={500}>
+          <NavLink to="home" smooth={true} duration={500} className="active">
             Home
           </NavLink>
           <NavLink to="about" smooth={true} duration={500}>

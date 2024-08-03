@@ -7,8 +7,8 @@ import { FaLinkedin, FaTwitter, FaGithub, FaDev } from 'react-icons/fa';
 // Styled component for the footer container
 const FooterContainer = styled.footer`
   padding: 2rem;
-  background-color: rgba(20, 20, 20, 0.9); // Dark transparent background
-  color: #ffffff; // Light color for text
+  background-color: #F0F0F0; // Very light grey background
+  color: #009ACD; // Enhanced deep sky blue color
   text-align: center;
 `;
 
@@ -25,11 +25,11 @@ const SocialLinkItem = styled.div`
   font-size: 1.5rem;
 
   a {
-    color: #e94560; // Light color for the social link icons
+    color: #009ACD; // Enhanced deep sky blue color for the social link icons
     transition: color 0.3s;
 
     &:hover {
-      color: #ffffff; // Change color on hover
+      color: #007BB5; // Slightly deeper color on hover
     }
   }
 `;
@@ -37,7 +37,7 @@ const SocialLinkItem = styled.div`
 // Styled component for the copyright text
 const Copyright = styled.p`
   font-size: 0.9rem;
-  color: #b0b0b0; // Greyish color for the copyright text
+  color: #666666; // Greyish color for the copyright text
 `;
 
 // Define the Footer component

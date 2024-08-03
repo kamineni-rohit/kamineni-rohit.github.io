@@ -3,7 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// Styled component for the home container
+// Styled component for the home container with background design
 const HomeContainer = styled.section`
   height: 100vh;
   display: flex;
@@ -11,8 +11,10 @@ const HomeContainer = styled.section`
   justify-content: center;
   align-items: center;
   padding-top: 5rem; // Offset for the fixed header
-  background-color: #121212; // Dark background color
-  color: #ffffff; // Light color for text
+  background-color: #FFFFFF; // White background color
+  background: url('path_to_background_design_image') no-repeat center center fixed; // Add background design
+  background-size: cover;
+  color: #009ACD; // Enhanced deep sky blue color
 `;
 
 // Styled component for the welcome text
@@ -38,16 +40,16 @@ const NavButtons = styled.div`
 // Styled component for each button
 const Button = styled.button`
   padding: 0.8rem 1.2rem;
-  background-color: rgba(233, 69, 96, 0.8); // Transparent button background
+  background-color: #009ACD; // Enhanced deep sky blue color
   border: none;
-  color: #ffffff;
+  color: #FFFFFF;
   cursor: pointer;
   font-size: 1rem;
   border-radius: 5px;
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: rgba(233, 69, 96, 1); // Solid color on hover
+    background-color: #007BB5; // Slightly deeper color on hover
   }
 `;
 

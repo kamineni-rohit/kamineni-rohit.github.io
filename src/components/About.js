@@ -6,8 +6,8 @@ import styled from 'styled-components';
 // Styled component for the about container
 const AboutContainer = styled.section`
   padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.1); // Transparent greyish background
-  color: #ffffff; // Light color for text
+  background-color: #F0F0F0; // Very light grey background
+  color: #009ACD; // Enhanced deep sky blue color
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,13 +25,13 @@ const AboutText = styled.div`
 const Title = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #e94560; // Light color for the title
+  color: #007BB5; // Slightly deeper color for the title
 `;
 
 // Styled component for the description text
 const Description = styled.p`
   font-size: 1.2rem;
-  color: #b0b0b0; // Greyish color for the description
+  color: #666666; // Greyish color for the description
 `;
 
 // Define the About component
