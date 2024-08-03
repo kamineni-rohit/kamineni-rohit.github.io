@@ -11,8 +11,8 @@ const HomeContainer = styled.section`
   justify-content: center;
   align-items: center;
   padding-top: 5rem; // Offset for the fixed header
-  background-color: #1a1a2e;
-  color: #ffffff;
+  background-color: #121212; // Dark background color
+  color: #ffffff; // Light color for text
 `;
 
 // Styled component for the welcome text
@@ -38,7 +38,7 @@ const NavButtons = styled.div`
 // Styled component for each button
 const Button = styled.button`
   padding: 0.8rem 1.2rem;
-  background-color: #e94560;
+  background-color: rgba(233, 69, 96, 0.8); // Transparent button background
   border: none;
   color: #ffffff;
   cursor: pointer;
@@ -47,7 +47,7 @@ const Button = styled.button`
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: #d83148;
+    background-color: rgba(233, 69, 96, 1); // Solid color on hover
   }
 `;
 

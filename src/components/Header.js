@@ -9,8 +9,8 @@ const HeaderContainer = styled.header`
   position: fixed;
   width: 100%;
   top: 0;
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(20, 20, 20, 0.9); // Dark transparent background
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   transition: all 0.3s ease-in-out;
 `;
@@ -27,7 +27,7 @@ const NavLinks = styled.nav`
 const Logo = styled.div`
   font-size: 1.5rem;
   font-weight: bold;
-  color: #1a1a2e;
+  color: #e94560; // Light color for the logo text
 `;
 
 // Styled component for the individual link
@@ -35,7 +35,7 @@ const NavLink = styled(Link)`
   margin: 0 1rem;
   cursor: pointer;
   font-size: 1rem;
-  color: #1a1a2e;
+  color: #ffffff; // Light color for the links
   text-decoration: none;
   position: relative;
 
