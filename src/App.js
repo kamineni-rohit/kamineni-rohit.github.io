@@ -1,29 +1,31 @@
-// src/App.js
-
-import React, { useRef } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
+import Education from './components/Education';
+import Experience from './components/Experience';
+import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Certifications from './components/Certifications';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
+import './styles.css';
 
 const App = () => {
-  const aboutRef = useRef(null);
-  const projectsRef = useRef(null);
-  const contactRef = useRef(null);
-
-  return (
-    <Router>
-      <Header />
-      <main>
-        <Home aboutRef={aboutRef} projectsRef={projectsRef} contactRef={contactRef} />
-        <About ref={aboutRef} />
-        <Projects ref={projectsRef} />
-      </main>
-      <Footer ref={contactRef} />
-    </Router>
-  );
+    return (
+        <div>
+            <Header />
+            <Home />
+            <About />
+            <Education />
+            <Experience />
+            <Skills />
+            <Projects />
+            <Certifications />
+            <Contact />
+            <Footer />
+        </div>
+    );
 };
 
 export default App;
