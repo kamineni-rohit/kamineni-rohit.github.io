@@ -12,7 +12,6 @@ const HomeContainer = styled.section`
   align-items: center;
   padding-top: 5rem; // Offset for the fixed header
   background-color: #FFFFFF; // White background color
-  background: url('path_to_background_design_image') no-repeat center center fixed; // Add background design
   background-size: cover;
   color: #009ACD; // Enhanced deep sky blue color
 `;
